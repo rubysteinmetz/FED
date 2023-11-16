@@ -16,10 +16,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Ruby Steinmetz
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Blauw
 
   #### Je focus:
   hier je focus (kies uit responsive óf surface plane)
@@ -36,7 +36,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  [link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp](https://www.efteling.com/nl)
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
@@ -58,7 +58,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
-</details>
+De website van de efteling gebruikt veel div's. Hier en daar zijn wel wat p'tjes te vinden maar dit zijn helaas ook vaan spans. Ook is bij de screenreader test te merken dat niet alle links een echte link zijn en dus nergens naar toe gaan.
+In de WCAG test merk ik dat het over het algemeen wel goed gaat met bijvoorbeeld de list en de links. Ook hebben alle foto's een alt tekst. Wel worden sommige foto's die misschien wel belangrijk zijn voor screenreaders op visibility:hidden gezet.
 
 
 
