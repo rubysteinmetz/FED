@@ -15,8 +15,16 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--background-color:#FAFAF6;
+  --headerAndBox-color:#FFFFFF;
+  --generalFont-color:#4D3927;
+  --buttonAndFont-color:#B81134;
+  --border-color:#EDE5D5;
+}
+
+@font-face {
+  font-family: "RobotaFontReg";
+  src: url(../fonts/RobotoSlab-Bold.ttf);
 }
 
 
@@ -28,4 +36,93 @@
 /****************/
 
 /* jouw code */
+/* Algemene stijlen */
+
+body {
+  margin:0;
+  background-color:var(--background-color);
+  color:var(--generalFont-color);
+}
+
+/* smallscreen styling */
+/* header styling */
+
+
+header {
+  min-height:4em;
+  background-color:var(--headerAndBox-color);
+
+  display:flex;
+  gap: 1em;
+
+	padding: 0.5em;
+}
+
+header > button {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+
+	gap: 1em;
+
+	border: none;
+	background-color: var(--background-color);	
+}
+
+header:first-of-type img:first-of-type {
+	margin-right: auto;
+	height: 2.5em;
+}
+
+nav {
+	padding:1em;
+  
+  display:grid;
+  align-content:start;
+  gap:1em;
+  
+  
+  position: fixed;
+  inset:0;
+ 
+  translate:-100% 0;
+  
+  transition: 1s;
+
+	background-color:var(--headerAndBox-color);
+  
+}
+
+/* als menu open is */
+nav.open {
+  /* JOUW CODE HIER - stap 4 */
+  translate: 0 0;
+  
+  
+}
+
+nav > a {
+	background-color: var(--buttonAndFont-color);
+	color: var(--headerAndBox-color);
+	padding: 0.5em 2em;
+	text-align: center;
+	max-width: max-content;
+	text-decoration: none;
+	justify-self: center;
+	font-size: 1.2em;
+	border-radius: 0.2em;
+
+	font-family: "RobotaFontReg";
+
+}
+
+h2 {
+	font-family: "RobotaFontReg";
+	color: var(--generalFont-color);
+	font-size: 1.5em;
+	border: 1px var(--border-color);
+}
+
+
+
 
