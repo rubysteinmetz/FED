@@ -39,12 +39,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://www.efteling.com/nl
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Home pagina
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Home pagina 
+  <img src="readme-images/screenshotefteling1.jpg" width="375px" alt="De home pagina van de Efteling website">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Alle attracties 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Alle attracties pagina 
+  <img src="readme-images/screenshotefteling2.jpg" width="375px" alt="De pagina met alle attracties van de Efteling">
  
 </details>
 
@@ -52,11 +52,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Toegankelijkheidstest 1/2 (week 1)
 
-<details>
+<details open>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  De pagina van efteling staat vol met div'jes. Wel gebruiken ze hier en daar de juiste elementen in hun HTML. Bij de sceenreader test merkte ik wel dat je soms bij links geen uiteinde hebben.
 
 </details>
 
@@ -84,7 +84,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Voortgang 1 (week 2)
 
-<details>
+<details open>
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
@@ -94,11 +94,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Beyza          | Nicholas            | Daniël               | Ruby                |
+  | ---            | ---                 | ---                  | ---                 |
+  | dit bespreken  | Afbeelding meesizen | Foto als achtergrond | Elementen hidden    |
+  | en dat ook nog | met scherm          | Margin voor hele     | op scherm maar niet |
+  | ...            | Linkje op afbeelding| pagina behalve BG    | voor screenreader   |
 
 
   ### Verslag van meeting
