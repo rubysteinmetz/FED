@@ -94,11 +94,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Beyza          | Nicholas            | Daniël               | Ruby                |
-  | ---            | ---                 | ---                  | ---                 |
-  | dit bespreken  | Afbeelding meesizen | Foto als achtergrond | Elementen hidden    |
-  | en dat ook nog | met scherm          | Margin voor hele     | op scherm maar niet |
-  | ...            | Linkje op afbeelding| pagina behalve BG    | voor screenreader   |
+  | Beyza                | Nicholas            | Daniël               | Ruby                |
+  | ---                  | ---                 | ---                  | ---                 |
+  | video op website     | Afbeelding meesizen | Foto als achtergrond | Elementen hidden    |
+  | die niet automatisch | met scherm          | Margin voor hele     | op scherm maar niet |
+  | afspeelt             | Linkje op afbeelding| pagina behalve BG    | voor screenreader   |
 
 
   ### Verslag van meeting
