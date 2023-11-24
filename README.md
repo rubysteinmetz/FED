@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Home pagina 
-  <img src="readme-images/screenshotefteling1.jpg" width="375px" alt="De home pagina van de Efteling website">
+  <img src="readme-images/screenshotefteling1.png" width="375px" alt="De home pagina van de Efteling website">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Alle attracties pagina 
-  <img src="readme-images/screenshotefteling2.jpg" width="375px" alt="De pagina met alle attracties van de Efteling">
+  <img src="readme-images/screenshotefteling2.png" width="375px" alt="De pagina met alle attracties van de Efteling">
  
 </details>
 
@@ -95,9 +95,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Voorbeeld Foto's
   
-  <img src="readme-images/HTML_1eVersie" width="375px" alt="1e versie van mijn zelf geschreven HTML">
+  <img src="readme-images/HTML_1eVersie.png" width="375px" alt="1e versie van mijn zelf geschreven HTML">
 
-  <img src="readme-images/HTML_1eVersieMenu" width="375px" alt="1e versie van mijn zelf geschreven HTML hamburger menu">
+  <img src="readme-images/HTML_1eVersieMenu.png" width="375px" alt="1e versie van mijn zelf geschreven HTML hamburger menu">
 
 
 
