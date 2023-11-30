@@ -52,7 +52,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Toegankelijkheidstest 1/2 (week 1)
 
-<details open>
+<details>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
@@ -84,7 +84,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Voortgang 1 (week 2)
 
-<details open>
+<details>
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
@@ -115,10 +115,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Dat je door middel van de class visually hidden dingen kan verbergen voor het scherm maar niet voor
+  screenreaders. Je kan dingen ook op andere manieren verbergen maar dan zijn ze dus ook weg voor de screenreaders.
+  Je kan dingen ook verbergen door ze heel ver buiten beeld te zetten maar dit is een beetje een oude manier.
+  - Ik heb geleerd dat headings met nieuwe parents telkens opnieuw beginnen met tellen. 
+  - Door :cover te gebruiken zorg je ervoor dat je een foto over het hele scherm zet. Deze snijdt dan zelf mooi de randjes af en gaat dan ook niet raar stretchen.
 
 </details>
 
@@ -128,21 +129,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Voortgang 2 (week 3)
 
-<details>
+<details open>
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  hier dit ging goed & dit was lastig
+
+  Goed: Het namaken van de website gaat steeds beter, ik merk meer wat er nodig is om iets op de juiste 
+  plaats te zetten.
+
+  Lastig: animaties maken. Gebruiken van grid, ik merk dat ik dit lastig vind en hier nog een beetje van
+  weg blijf en dus vaker voor flexbox kies.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Beyza          | Nicholas                    | Daniël       | Ruby                                 |
+  | ---            | ---                         | ---          | ---                                  |
+  | dit bespreken  | Bij background-size: cover  | en ik dit    | Uitklap menu maken                   |
+  | en dat ook nog | foto links uitgelijnd       | nog een punt | Zijwaartse scroll door foto's        |
+  | ...            | ...                         | ...          | Vinkjes aan de linker kant van tekst |
+  |                |                             |              | Border om section                    |
 
 
   ### Verslag van meeting
@@ -240,7 +248,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
+  1. https://www.a11yproject.com/posts/how-to-hide-content/
   2. bron 2
   3. ...
 
