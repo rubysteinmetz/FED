@@ -183,7 +183,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Voortgang 3 (week 4)
 
-<details>
+<details open>
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
@@ -193,11 +193,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Tico                     | Ruby                                  | student 3    | student 4        |
+  | ---                      | ---                                   | ---          | ---              |
+  | de footer van mijn site  | lijntjes onder woorden in menu        | en ik dit    | en dan ik dat    |
+  | narrator knopjes oplezen | pijltjes summary en details aanpassen | nog een punt | dit wil ik zeker |
+  | ...                      | ...                                   | ...          | ...              |
 
 
   ### Verslag van meeting
