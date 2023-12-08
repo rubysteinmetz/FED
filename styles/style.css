@@ -16,7 +16,10 @@
   --border-color:#EDE5D5;
 	--outline-color:#920E29;
 	--shadow-color:rgba(0, 0, 0, 0.6);
+	--date-color:#A69E96;
 }
+
+/* De fonts voor mijn website */
 
 @font-face {
   font-family: "RobotaFontReg";
@@ -84,12 +87,30 @@ header > button {
 	background-color: var(--background-color);	
 }
 
+header a:first-of-type:not {
+	font-family: "RobotaFontReg";
+	text-decoration: none;
+	font-size:1.2em;
+	padding: 0.4em 1.5em;
+	display:inline-block;
+	border-radius: 0.2em;
+	color: var(--buttonAndFont-color);
+}
+
+header h2 + a {
+	color: var(--headerAndBox-color);
+}
+
+body > header img {
+	max-height: 1em;
+}
+
 /* header:first-of-type img:first-of-type {
 	margin-right: auto;
 	height: 2em;
 } */
 
-nav {
+header nav {
 	padding:1em;
   
   display:grid;
@@ -97,7 +118,7 @@ nav {
 
   gap:1em;
 
-	z-index: 1;
+	z-index: 500;
 
   position: fixed;
   inset:0;
@@ -112,60 +133,59 @@ nav {
   
 }
 
-nav a {
+header nav a {
 	font-family: "RobotaFontReg";
 	text-decoration: none;
 	font-size:1.2em;
-	padding: 0.4em 1.5em;
+	
 	display:inline-block;
 	border-radius: 0.2em;
 	color: var(--buttonAndFont-color);
 }
 
-header a:first-of-type {
-		font-family: "RobotaFontReg";
-		text-decoration: none;
-		font-size:1.2em;
-		padding: 0.4em 1.5em;
-		display:inline-block;
-		border-radius: 0.2em;
-		color: var(--buttonAndFont-color);
-}
-
 /* als menu open is */
-nav.open {
+header nav.open {
   /* JOUW CODE HIER - stap 4 */
   translate: 0 0;
   
   
 }
-
-	nav > a {
-		background-color: var(--buttonAndFont-color);
-		color: var(--headerAndBox-color);
-		max-width: max-content;
-		justify-self: center;
-
-		outline: var(--outline-color);
-		outline-width: 1px;
-		outline-style: solid;
-		outline-offset: -.3em;
 		
+header nav > a:first-of-type {
+	background-color: var(--buttonAndFont-color);
+	color: var(--headerAndBox-color);
+	max-width: max-content;
+	justify-self: center;
 
-		
-	}
+	outline: var(--outline-color);
+	outline-width: 1px;
+	outline-style: solid;
+	outline-offset: -.3em;
 
-	nav > a:active {
+	font-family: "RobotaFontReg";
+
+	padding: 0.4em 1.5em;
+}
+
+	header nav > a:active {
 		background-color:var(--outline-color);
 		outline: currentcolor;
 	}
 
-	nav section {
+	header nav section {
 		background-color: var(--headerAndBox-color);
 	}
 
-	nav a {
+	header nav a {
 		text-decoration: none;
+		color: var(--generalFont-color);
+		font-family: "generalFont";
+		padding: 0em 0.8em;
+	}
+
+	header nav section > h2 {
+		color: var(--generalFont-color);
+		font-size: 1.4em;
 	}
 
 	li {
@@ -198,9 +218,7 @@ h3 {
 	width: 100vw;
 } */
 
-body > header img {
-	max-height: 1em;
-}
+
 
 h1 {
 	margin: 0;
@@ -242,23 +260,18 @@ main section a {
 	border-radius: 0.2em;
 	color: var(--headerAndBox-color);
 	max-width: max-content;
-	justify-self: center;
 
 	outline: var(--outline-color);
 	outline-width: 1px;
 	outline-style: solid;
 	outline-offset: -.3em;
-		
-
+	
 	text-decoration: none;
 	font-size:1em;
 
-	margin-bottom: 2em;
-	border: solid 2px var(--border-color);
+	margin: -1em 0em 2em 2em;
 
-
-
-
+	/* margin-bottom: 2em; */
 }
 
 section > h2 {
@@ -274,6 +287,7 @@ h2 + ul {
 	padding: 0;
 	margin: 0;
 }
+
 
 main header {
 	position:relative;
@@ -310,10 +324,18 @@ div > h2 {
 
 
 
-div > a:first-of-type {
+header div > a:first-of-type {
 	border: solid 2px var(--headerAndBox-color);
 	color: var(--headerAndBox-color);
+	padding: 0.5em 1em;
+	text-decoration: none;
+	border-radius: 5%;
+	font-family: "RobotaFontReg";
 }
+
+
+
+
 
 section > h2 {
 	font-family: "RobotaFontReg";
@@ -379,9 +401,7 @@ main header + section a {
 	padding: 0em;
 	outline: transparent;
 	font-family: "generalFont";
-	font-size: .7em;
-
-	
+	font-size: .7em;	
 }
 
 section > ul {
@@ -394,6 +414,163 @@ section > p {
 	font-family: "generalFont";
 	padding: 0em 2em 2em 2em;
 }
+
+ul li > a {
+	text-decoration: none;
+	color: inherit;
+	font-family: "RobotaFontReg";
+	padding: 0.5em 1em;
+}
+
+main section:nth-of-type(2) ul > li{
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: flex-end;
+	margin-bottom: 0.5em;
+}
+
+main section:nth-of-type(2) ul li > img{
+	margin-right: 1em;
+}
+
+main section a:not(section:nth-of-type(2) a) {
+	background-color: var(--headerAndBox-color);
+	color: var(--buttonAndFont-color);
+	border: solid 1px var(--border-color);
+	outline: var(--border-color);
+	outline-width: 1px;
+	outline-style: solid;
+	outline-offset: -.3em;
+}
+
+main section:first-of-type > a:first-of-type {
+	margin: 0em;
+	border: none;
+	outline: none;
+	color: var(--generalFont-color);
+}
+
+section:not(nav section) {
+	border: solid 2px var(--border-color);
+}
+
+main section:nth-of-type(6) {
+	padding: 0;
+	margin: 0;
+	border: none;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+main section:nth-of-type(6) img {
+	width: 100%;
+	height: 35em;
+	filter: brightness(.7);
+	background-color: none;	
+}
+
+main section:nth-of-type(6) div {
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	display:grid;
+	place-items: center;
+	text-align: center;
+	align-items: center;
+	padding: 5em 0em;
+}
+
+main section:nth-of-type(6) button {
+	font-family: "RobotaFontReg";
+	text-decoration: none;
+	font-size:1.2em;
+	
+	background-color: var(--buttonAndFont-color);
+	color: var(--headerAndBox-color);
+	outline: var(--outline-color);
+	outline-width: 1px;
+	outline-style: solid;
+	outline-offset: -.3em;
+	padding: 0.5em 1em;
+	border: none;
+	border-radius: 0.2em;
+}
+
+main section:nth-of-type(7) {
+	padding: 0;
+	margin: 0;
+	background-color: 0;
+	border: 0;
+
+	grid-template-rows: 3em 27em 3.5em;
+
+	
+}
+
+
+main section:nth-of-type(7) ul{
+
+	display: flex;
+	flex-direction:row;
+	
+	overflow-x: scroll;
+
+	overscroll-behavior: contain auto;
+
+	gap: 1em;
+
+	border-radius: 0.2em;
+
+	
+
+}
+
+main section:nth-of-type(7) li {
+
+	display: grid;
+
+	background-color: var(--headerAndBox-color);
+	border: solid 2px var(--border-color);
+	border-radius: 0.2em;
+
+	overflow-x: auto;
+
+	flex-shrink: 0;
+	width: 75%;
+
+
+	
+
+	
+
+	/* flex-basis:5em;
+  flex-shrink:0;
+  align-items:center;
+  gap:.25em;
+
+	scroll-snap-align: center; */
+
+
+}
+
+main section:nth-of-type(7) img {
+	width: 100%;
+	aspect-ratio: 4/3;
+	object-fit: cover;
+
+
+	grid-row-start: 1;
+	
+}
+
+main section:nth-of-type(7) h2 {
+	display: flex;
+	justify-content: center;
+}
+
+
 
 
 
