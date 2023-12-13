@@ -1,0 +1,272 @@
+/* de h2 in de section de juiste styling geven */
+main > section > h2:first-of-type {
+  color: var(--buttonAndFont-color);
+  font-family: "RobotaFontReg";
+  display: flex;
+  justify-content: center;
+}
+
+/* de eerste p op deze specifieke manier stylen */
+main > section > p:first-of-type {
+  display: flex;
+  justify-content: center;
+  padding: 0em 1em;
+  text-align: center;
+  font-family: "RobotaFontP";
+  color: var(--generalFont-color);
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+
+/* de foto's allemaal even groot maken */
+main section:nth-of-type(2) img {
+  width:22em;
+  border-radius: 1em;
+}
+
+/* De ul in een grid plaatsen zodat er meerdere op de pagina passen wanneer de pagina breder wordt */
+main section:nth-of-type(2) ul {
+  padding: 0.8em;
+
+
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(min(22em, 100%), 1fr));
+  gap:3em;
+
+  margin: 5em;
+}
+
+/* list relative maken zodat de div eroverheen kan bewegen */
+main section:nth-of-type(2) li {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+/* de div absoluut maken */
+main section:nth-of-type(2) div {
+  position: absolute;
+  bottom: 1.5em;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* de h2 in de div stylen */
+div > h2 {
+  font-family: "heroFont";
+  color: var(--headerAndBox-color);
+  font-size: 1.9em;
+  margin: 0em;
+  text-shadow: 1px 1px 2px var(--shadow-color);
+}
+
+/* de p in de div stylen */
+div > p {
+  color:var(--headerAndBox-color);
+  margin: 0em;
+  font-family: "RobotoFontReg";
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px var(--shadow-color);
+}
+
+/* een hover state geven aan de list elementen */
+section ul li img:hover {
+  box-shadow: 3px 3px 6px var(--shadow-color);
+}
+
+
+/* de sterretjes een animatie geven en een sterretje maken door gradient */
+div.ster {
+  position:relative;
+  width:1em;
+  height:1em;
+  
+  animation-name: spinnyStars;
+  animation-duration: 1s;
+  
+  
+  background-image:
+    radial-gradient(
+      at 0% 0%,
+      transparent 70%,
+      var(--buttonAndFont-color) 70%
+    ),
+    radial-gradient(
+      at 100% 0%,
+      transparent 70%,
+      var(--buttonAndFont-color) 70%
+    ),
+    radial-gradient(
+      at 100% 100%,
+      transparent 70%,
+      var(--buttonAndFont-color) 70%
+    ),
+    radial-gradient(
+      at 0% 100%,
+      transparent 70%,
+      var(--buttonAndFont-color) 70%
+    );
+  
+  background-size:50% 50%;
+  
+  background-repeat:no-repeat;
+  
+  background-position:
+    left top,
+    right top,
+    right bottom,
+    left bottom;
+}
+
+/* een stokje uit het sterretje laten komen */
+div.ster:first-of-type::after {
+  content:"";
+  width:6em;
+  height:.25em;
+  background-color:var(--buttonAndFont-color);
+  position:absolute;
+  
+  left:50%;
+  top:calc(50% - .125em);
+  
+  scale:0 1;
+  
+  transform-origin:left center;
+  
+  animation-name:steeltje;
+  animation-duration:1s;
+  animation-delay:1s;
+  animation-fill-mode:forwards;
+}
+
+/* animatie geven aan de steeltjes die uit de ster komen*/
+div:nth-of-type(3)::before {
+  content:"";
+  width:6em;
+  height:.25em;
+  background-color:var(--buttonAndFont-color);
+  position:absolute;
+  
+  right:50%;
+  top:calc(50% - .125em);
+  
+  scale:0 1;
+  
+  transform-origin:right center;
+  
+  animation-name:steeltje;
+  animation-duration:1s;
+  animation-delay:1s;
+  animation-fill-mode:forwards;
+  
+}
+
+
+/* de animatie van het steeltje */
+@keyframes steeltje {
+  100% {
+    scale:1 1;
+  }
+}
+
+/* het rad animeren */
+div.wheel {
+  width:2em;
+  
+  
+  position:relative;
+  
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+/* het andere steeltje van het reuzenrad */
+div.wheel::before {
+  content:"";
+  position:absolute;
+  width:70%;
+  height:8%;
+  background-color:var(--buttonAndFont-color);
+
+  left:45%;
+  top:45%;
+
+  transform-origin:7.14% 50%;
+  rotate:120deg;
+}
+/* het andere steeltje van het reuzenrad */
+div.wheel::after {
+  content:"";
+  position:absolute;
+  width:70%;
+  height:8%;
+  background-color:var(--buttonAndFont-color);
+  
+  left:45%;
+  top:45%;
+  
+  transform-origin:7.14% 50%;
+  rotate:60deg;
+}
+
+
+/* het rad de animatie toewijzen */
+svg {
+  fill: var(--buttonAndFont-color);
+  display:block;
+  
+  animation-name:ferrisWheel;
+  animation-duration: 12s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+  
+  width:100%;
+}
+
+/* de animatie maken voor het rad */
+@keyframes ferrisWheel {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  
+  }
+}
+
+/* de animatie voor de sterretjes */
+@keyframes spinnyStars {
+  0% {
+    scale: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    scale: 1;
+    transform: rotate(360deg);
+  }
+}
+
+/* het reuzerad in laten faden */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* de animatie de juiste volgorde geven */
+section > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 3em;
+}

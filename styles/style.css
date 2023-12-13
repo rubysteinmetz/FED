@@ -27,6 +27,11 @@
 }
 
 @font-face {
+	font-family: "RobotaFontP";
+	src: url(../fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+
+@font-face {
 	font-family: "heroFont";
 	src: url(../fonts/Verner.ttf);
 }
@@ -34,6 +39,11 @@
 @font-face {
 	font-family: "generalFont";
 	src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: "generalFontBold";
+	src: url(../fonts/OpenSans-Bold.ttf);
 }
 
 .visually-hidden {
@@ -53,522 +63,395 @@
 
 /* jouw code */
 /* Algemene stijlen */
+html.open {
+	overflow: hidden;
+}
 
 body {
   margin:0;
+
   background-color:var(--background-color);
   color:var(--generalFont-color);
 }
 
-/* smallscreen styling */
-/* header styling */
 
 
+/* styling voor de header */
 body > header {
+	display:flex;
+	align-items: center;
+
   max-height:4em;
+	padding: 1em;
+
   background-color:var(--headerAndBox-color);
 
-  display:flex;
-  gap: 1em;
-	
-	padding: 0.5em;
-
-	font-family: "RobotaFontReg";
+	font-family: "RobotaFontReg";	
 }
 
-header > button {
+/* styling menu button in de header en nav */
+body > header button {
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
 
 	gap: 1em;
 
+	background-color: var(--headerAndBox-color);	
 	border: none;
-	background-color: var(--background-color);	
 }
 
-header a:first-of-type:not {
-	font-family: "RobotaFontReg";
-	text-decoration: none;
-	font-size:1.2em;
-	padding: 0.4em 1.5em;
-	display:inline-block;
-	border-radius: 0.2em;
-	color: var(--buttonAndFont-color);
-}
-
-header h2 + a {
-	color: var(--headerAndBox-color);
-}
-
+/* maat van de iconen in de header */
 body > header img {
 	max-height: 1em;
 }
 
-/* header:first-of-type img:first-of-type {
-	margin-right: auto;
-	height: 2em;
-} */
-
+/* styling voor het menu */
 header nav {
-	padding:1em;
-  
-  display:grid;
-  align-content:start;
-
-  gap:1em;
-
+	position: fixed;
 	z-index: 500;
-
-  position: fixed;
   inset:0;
- 
-  translate:-100% 0;
-  
-  transition: 1s;
+
+	display:grid;
+  align-content:start;
+	overflow: scroll;
+
+	padding:1em;
+  gap:1em;
 
 	background-color:var(--headerAndBox-color);
 
-
-  
+	translate:-100% 0;
+  transition: 1s; 
 }
 
+/* padding weghalen op de nav */
+header nav {
+	padding: 0em;
+}
+
+/* padding weghalen op het lijstje in de nav */
+header nav ul {
+	padding: 0em;
+}
+
+/* list items individueel een padding geven zodat de border bottom helemaal van links naar rechts loopt */
+ /* De lijntjes onder de list items in het menu */
+header nav ul > li {
+	padding-left: 1em;
+
+	border-bottom: solid 2px var(--border-color);
+}
+
+
+/* Het lijntje boven de eerste list iten in het menu */
+header nav li:first-of-type {
+	border-top: solid 1px var(--border-color);
+}
+
+/* styling voor de linkjes in het menu */
 header nav a {
-	font-family: "RobotaFontReg";
-	text-decoration: none;
-	font-size:1.2em;
-	
 	display:inline-block;
+
 	border-radius: 0.2em;
+
+	font-size:1.2em;
+	font-family: "RobotaFontReg";
 	color: var(--buttonAndFont-color);
+	text-decoration: none;
 }
 
-/* als menu open is */
+/* Het menu in beeld verplaatsen als hij open in */
 header nav.open {
-  /* JOUW CODE HIER - stap 4 */
-  translate: 0 0;
-  
-  
+  translate: 0 0; 
 }
-		
+
+
+/* Styling voor het eerste linkje in de nav  */
 header nav > a:first-of-type {
-	background-color: var(--buttonAndFont-color);
-	color: var(--headerAndBox-color);
-	max-width: max-content;
 	justify-self: center;
 
+	padding: 0.4em 1.5em;
+	max-width: max-content;
+
+	background-color: var(--buttonAndFont-color);
 	outline: var(--outline-color);
 	outline-width: 1px;
 	outline-style: solid;
 	outline-offset: -.3em;
 
 	font-family: "RobotaFontReg";
-
-	padding: 0.4em 1.5em;
-}
-
-	header nav > a:active {
-		background-color:var(--outline-color);
-		outline: currentcolor;
-	}
-
-	header nav section {
-		background-color: var(--headerAndBox-color);
-	}
-
-	header nav a {
-		text-decoration: none;
-		color: var(--generalFont-color);
-		font-family: "generalFont";
-		padding: 0em 0.8em;
-	}
-
-	header nav section > h2 {
-		color: var(--generalFont-color);
-		font-size: 1.4em;
-	}
-
-	li {
-		list-style: none;
-	}
-
-	/* nav > a {
-	background-color: var(--buttonAndFont-color);
 	color: var(--headerAndBox-color);
-	padding: 0.5em 2em;
-	text-align: center;
-	max-width: max-content;
-	text-decoration: none;
-	justify-self: center;
-	font-size: 1.2em;
-	border-radius: 0.2em;
-
-	font-family: "RobotaFontReg";
-
-} */
-
-h3 {
-	font-family: "RobotaFontReg";
-	color: var(--generalFont-color);
-	font-size: 1.5em;
-	border: 1px var(--border-color);
 }
 
-/* main header img {
-	width: 100vw;
-} */
+/* De achtergrond kleur in de nav */
+header nav section {
+	background-color: var(--headerAndBox-color);
+}
 
+/* styling van de linkjes in de nav */
+header nav a {
+	display: block;
 
+	padding: 0em 0.8em;
 
+	font-family: "generalFont";
+	color: var(--generalFont-color);
+	text-decoration: none;
+}
+
+/* styling van de h2 in de nav */
+header nav section > h2 {
+	font-size: 1.4em;
+	color: var(--generalFont-color);
+}
+
+/* Alle lijst elementen hebben geen rondje ervoor */
+li {
+	list-style: none;
+}
+
+/* styling van de h1 (het efteling logo) en hem links uitlijnen */
 h1 {
 	margin: 0;
 	padding: 0;
 	margin-right: auto;
 }
+ /* Zorgen dat de elementen in de footer naast elkaar staan */
+footer > section {
+	display: flex;
+	flex-wrap: wrap;
 
-main section {
-	display: grid;
+	padding: 1em;
+}
+/* De volgorde van de dingen in de eerste section van de footer */
+footer > section img {
+	order: 1;
 
-	grid-template-rows: 10em max-content;
+	align-items: center;
 
-	margin: 2em;
-
-	font-family: "RobotaFontReg";
-
-	background-color: var(--headerAndBox-color);
-	border-radius: 4%;
-
+	width: 1.3em;
+	height: 1.3em;
+	margin-right: .5em;
 }
 
-section a + img {
-	width: 100%;
-	height: auto;
-	align-self: stretch;
-	object-fit: cover;
+/* Zorgen dat de h2 na de img komt te staan */
+footer > section h2 {
+	order: 2;
 
-	display: block;
-
-	grid-row-start: 1;
-}
-
-main section a {
-	position: relative;
-
-	background:var(--buttonAndFont-color);
-	padding: 0.5em 1em;
-	display:inline-block;
-	border-radius: 0.2em;
-	color: var(--headerAndBox-color);
-	max-width: max-content;
-
-	outline: var(--outline-color);
-	outline-width: 1px;
-	outline-style: solid;
-	outline-offset: -.3em;
-	
-	text-decoration: none;
-	font-size:1em;
-
-	margin: -1em 0em 2em 2em;
-
-	/* margin-bottom: 2em; */
-}
-
-section > h2 {
-	padding: 0em 2em;
-	color: var(--buttonAndFont-color);
-}
-
-li img {
-	width:1.5em;
-}
-
-h2 + ul {
+	margin: 0;
 	padding: 0;
-	margin: 0;
-}
 
-
-main header {
-	position:relative;
-}
-
-main header > img {
-	width: 100%;
-	aspect-ratio: 9/7;
-	object-fit: cover;
-	filter: brightness(.7);
-}
-
-main header > div { 
-	position: absolute;
-	width: 100%;
-	aspect-ratio: 9/7;
-	top: 0;
-	z-index: 1;
-	display:grid;
-	place-items: center;
-	text-align: center;
-	padding: 5em 0em;
-}
-
-div > h2 {
-	margin: 0;
-	font-family: "heroFont";
-	color: var(--headerAndBox-color);
-	text-shadow: 1px 1px 2px var(--shadow-color);
-	font-size: 1.85em;
-	line-height: 1.8em;
-}
-
-
-
-
-header div > a:first-of-type {
-	border: solid 2px var(--headerAndBox-color);
-	color: var(--headerAndBox-color);
-	padding: 0.5em 1em;
-	text-decoration: none;
-	border-radius: 5%;
-	font-family: "RobotaFontReg";
-}
-
-
-
-
-
-section > h2 {
-	font-family: "RobotaFontReg";
-	line-height: auto;
-	font-size: 1em;
-}
-
-main header > ul {
-	background-color: var(--headerAndBox-color);
-	border: solid 2px var(--border-color);
-	margin-top: -0.8em;
-	margin-left: 1em;
-	margin-right: 1em;
-	top: -2em;
-	padding: 0em;
-	border-radius: .5em;
-	position: relative;
-	z-index: 50;
 	font-size: .8em;
+	font-family: "generalFontBold";
+	color: var(--generalFont-color);
 }
 
-main header ul > li {
-	display: flex;
-	align-items: center;
-	padding: .4em;
-	color: var(--buttonAndFont-color);
-	justify-content: space-between;
-}
+/* styling voor de p in de footer en de volgorde kloppend maken */
+footer > section p {
+	order: 3;
 
-main header ul > li img {
-	width: .8em;
-	margin-right: 1em;
-
-}
-
-main header > ul li:first-of-type {
-	border-bottom: solid 2px var(--border-color);
-}
-
-main header + section {
-	display: block;
-	margin: 1em;
-	padding: 1em 1.5em;
-	border: solid 2px var(--border-color);
-	border-radius: .5em;
-
-
-}
-
-main header + section h2 {
-	margin: 0;
 	padding: 0;
+	margin: 0;
+
+	font-size: .8em;
+	font-family: "generalFont";
 	color: var(--generalFont-color);
-	font-family: "RobotaFontReg";
-	font-size: .7em;
 }
 
-main header + section a {
-	text-decoration: underline;
-	color: var(--generalFont-color);
-	background-color: transparent;
-	/* border: transparent; */
-	padding: 0em;
-	outline: transparent;
+/* De a als laatst in de footer zetten */
+footer > section a {
+	order: 4;
+
+	margin-left: 1.7em;
+
+	font-size: .8em;
 	font-family: "generalFont";
-	font-size: .7em;	
-}
-
-section > ul {
-	font-family: "generalFont";
-	padding: 0em 2em 2em 2em;
-}
-
-
-section > p {
-	font-family: "generalFont";
-	padding: 0em 2em 2em 2em;
-}
-
-ul li > a {
-	text-decoration: none;
 	color: inherit;
-	font-family: "RobotaFontReg";
-	padding: 0.5em 1em;
 }
 
-main section:nth-of-type(2) ul > li{
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	justify-content: flex-end;
-	margin-bottom: 0.5em;
-}
+/* de styling van de linkjes in de details */
+nav details a {
+	padding-left: .5em;
 
-main section:nth-of-type(2) ul li > img{
-	margin-right: 1em;
-}
-
-main section a:not(section:nth-of-type(2) a) {
-	background-color: var(--headerAndBox-color);
-	color: var(--buttonAndFont-color);
-	border: solid 1px var(--border-color);
-	outline: var(--border-color);
-	outline-width: 1px;
-	outline-style: solid;
-	outline-offset: -.3em;
-}
-
-main section:first-of-type > a:first-of-type {
-	margin: 0em;
-	border: none;
-	outline: none;
-	color: var(--generalFont-color);
-}
-
-section:not(nav section) {
-	border: solid 2px var(--border-color);
-}
-
-main section:nth-of-type(6) {
-	padding: 0;
-	margin: 0;
-	border: none;
-	position: relative;
-	display: flex;
-	align-items: center;
-}
-
-main section:nth-of-type(6) img {
-	width: 100%;
-	height: 35em;
-	filter: brightness(.7);
-	background-color: none;	
-}
-
-main section:nth-of-type(6) div {
-	position: absolute;
-	width: 100%;
-	z-index: 1;
-	display:grid;
-	place-items: center;
-	text-align: center;
-	align-items: center;
-	padding: 5em 0em;
-}
-
-main section:nth-of-type(6) button {
-	font-family: "RobotaFontReg";
+	font-family: "generalFont";
+	color: inherit;
 	text-decoration: none;
-	font-size:1.2em;
-	
+}
+
+/* de ul een beetje van de rand af zetten */
+details > ul {
+	padding-left: 1em;
+	margin: 0em;
+}
+
+/* de lijst elementen een padding boven en onder geven */
+details ul > li {
+	padding: .5em 0em;
+}
+
+/* Het font van de summary aanpassen */
+summary a:first-of-type {
+	font-family: "generalFontBold";
+}
+
+/* de kleur in de summary aanpassen wanneer je er overheen hovert */
+summary a:first-of-type:hover {
+	color: var(--buttonAndFont-color);
+}
+
+/* styling voor de details */
+details:last-of-type {
+	padding-left: .5em;
+
+	font-family: "generalFont";
+}
+
+/* de laatste details een padding geven */
+details:last-of-type > p {
+	padding: 0em 1.3em;
+}
+
+/* het email veld veranderen van styling */
+details:last-of-type input {
+	display: inline-block;
+
+	width: 93%;
+	padding:1em;
+	margin: 0em 1em;
+}
+
+/* button in details stylen */
+details button {
+	margin: 1em;
+	padding: 0.5em 1em;
+
 	background-color: var(--buttonAndFont-color);
-	color: var(--headerAndBox-color);
+	border: none;
+	border-radius: 0.2em;
+
 	outline: var(--outline-color);
 	outline-width: 1px;
 	outline-style: solid;
 	outline-offset: -.3em;
-	padding: 0.5em 1em;
-	border: none;
-	border-radius: 0.2em;
+
+	font-size:1.2em;
+	font-family: "RobotaFontReg";
+	color: var(--headerAndBox-color);
+	text-decoration: none;
 }
 
-main section:nth-of-type(7) {
-	padding: 0;
-	margin: 0;
-	background-color: 0;
-	border: 0;
-
-	grid-template-rows: 3em 27em 3.5em;
-
-	
+/* de p schuingedrukt maken */
+details:last-of-type p:last-of-type {
+	font-style: italic;
 }
 
+/* deze specifieke a een underline geven */
+details:last-of-type p:last-of-type > a {
+	padding-left: 0em;
 
-main section:nth-of-type(7) ul{
+	text-decoration: underline;
+}
 
+/* De summary naast elkaar zetten en een border geven 
+en het pijltje van de summary weghalen*/
+summary {
 	display: flex;
-	flex-direction:row;
-	
-	overflow-x: scroll;
+	justify-content: space-between;
+	align-items: center;
+	padding: .5em 1em;
 
-	overscroll-behavior: contain auto;
+	border-bottom: solid 1px var(--border-color);
 
-	gap: 1em;
-
-	border-radius: 0.2em;
-
-	
-
+	font-family: "generalFontBold";
+	list-style: none;	
 }
 
-main section:nth-of-type(7) li {
+/* het plusje bij de summary stylen  */
+summary::after {
+	content:"";
 
 	display: grid;
+	place-content: center;
+	width: 2.5em;
+	aspect-ratio: 1;
 
-	background-color: var(--headerAndBox-color);
-	border: solid 2px var(--border-color);
-	border-radius: 0.2em;
+	background-image:
+		linear-gradient(var(--generalFont-color) 0 0),
+		linear-gradient(var(--generalFont-color) 0 0);
+	background-size:
+		1em .2em,
+		.2em 1em;
+	background-repeat:
+		no-repeat;
+	background-position:
+		center;
+	border-radius:50%;
 
-	overflow-x: auto;
-
-	flex-shrink: 0;
-	width: 75%;
-
-
-	
-
-	
-
-	/* flex-basis:5em;
-  flex-shrink:0;
-  align-items:center;
-  gap:.25em;
-
-	scroll-snap-align: center; */
-
-
+	transition:.3s;
 }
 
-main section:nth-of-type(7) img {
-	width: 100%;
-	aspect-ratio: 4/3;
-	object-fit: cover;
+/* de lijstjes in de footer in het midden plaatsen */
+footer nav section:first-of-type ul {
+	display: flex;
+	justify-content: center;
 
-
-	grid-row-start: 1;
-	
+	padding: 0;
 }
 
-main section:nth-of-type(7) h2 {
+/*  de fotos in de lijstjes een specifieke hoogste geven */
+footer nav section:first-of-type ul img {
+	height: 3em;
+}
+
+/* de section in het midden zetten */
+footer section:nth-of-type(2) {
 	display: flex;
 	justify-content: center;
 }
+
+/* wanneer je over deze link hovert gaat de underline weg */
+footer section:first-of-type a:hover {
+	text-decoration: none;
+}
+
+/* wanneer je over deze link hovert veranderd de achtergrond kleur */
+main > section:nth-of-type(2) a:hover {
+	background-color: var(--outline-color);
+}
+
+/* Wanneer je door de site tabt de kleur van de outline hetzelfde maken als 
+de kleur van de tekst */
+main > section:nth-of-type(2) a:active {
+	outline: var(currentcolor);
+}
+
+/* achtergrond van de a verandert als je eroveheen hovert */
+article section a:hover {
+	background-color: var(--border-color);
+}
+
+/* Wanneer je door de site tabt de kleur van de outline hetzelfde maken als 
+de kleur van de tekst */
+article section a:active {
+	outline: var(currentcolor);
+}
+
+/* achtergrond van de a verandert als je eroveheen hovert */
+main > section:nth-of-type(3) a:hover {
+	background-color: var(--outline-color);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
