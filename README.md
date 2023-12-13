@@ -156,10 +156,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - gedetaileerder dingen aanspreken.
 
 </details>
 
@@ -175,6 +172,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  veel minder div'jes en duidelijkere alt teksten.
 </details>
 
 
@@ -203,8 +201,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - de summary na een bepaalde breedte open kunnen zetten
+  - een plusje maken ipv het lelijke pijltje
   - nog een punt
   - ...
 
@@ -220,19 +218,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="./readme-images/screenshotpagina.png" width="375px" alt="uitomst opdracht 1">
+  Dit is de tweede pagina die ik heb gemaakt waar ik echt blij mee ben met de uitkomst.
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik merkte dat css mij wel ec ht beter af ging en dat ik beter begrijp waar ik iets moet doen waardoor het responsive maken op sosmmige punten ook echt goed ging
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/screenshot2.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Het responsive maken van het bovenste menu met uitklap menu, wanneer je deze nu breder maakt is het nog steeds een uitklap menu
+  hieronder een foto van hoe het hoort te zijn.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/voorbeeldReadme.png.jpg" width="375px" alt="bummer">
 </details>
 
 
@@ -249,7 +248,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. Vermeld de bronnen ook in je code.
 
   1. https://www.a11yproject.com/posts/how-to-hide-content/
-  2. bron 2
-  3. ...
+  2. Sanne die mij met een hele boel geholpen heeft
+  3. de studentassistenten
 
 </details>
